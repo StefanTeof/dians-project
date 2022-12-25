@@ -1,0 +1,57 @@
+.grids{
+    text-align: center;
+    padding: 4rem;   
+}
+
+.grid{
+    background-color: white;
+    border-radius: 0 80px;
+    height: 28rem;
+}
+
+#map{
+    border-radius: 0;
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 50%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
+}
+
+#filter-by{
+    padding-top: 2rem;
+    color: rgb(9, 70, 42);
+}
+
+#hotels-overflow{
+    overflow-y: scroll;
+}
+
+#hotels-title{
+    padding: 2rem;
+    color: rgb(9, 70, 42);
+
+}
+/* .filters{
+    padding: 0.5em 0 0.5rem 0;
+} */
+
+.leaflet-container{
+    height: 300px;
+    width: 300px;
+}
+
+.list-btn:focus{
+    background-color: rgb(235, 231, 231);
+    border-radius: 2rem;
+}
+
+.list-btn:hover{
+    border-radius: 2rem;
+}
+
+/* .filters{
+    text-align: start;
+    padding-left: 1rem;
+    padding: 0.2em 0 0.2rem 1rem;
+} */
+
+.find-hotels-grid-titles{
+    font-weight: bold;
+}
