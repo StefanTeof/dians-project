@@ -1,0 +1,27 @@
+# Use the official image as a parent image
+FROM openjdk:11-jre-slim-buster
+
+# Set the working directory
+WORKDIR /szj
+
+# Copy the necessary files to the container
+COPY target/*.jar /app/backend.jar
+COPY frontend/ /szj/frontend/
+COPY docker-entrypoint.sh /szj/
+
+# Set the environment variables
+ENV DB_HOST=localhost
+ENV DB_PORT=3306
+ENV DB_NAME=dians_final
+ENV DB_USER=root
+ENV DB_PASS=joana
+
+# Install necessary dependencies for frontend
+RUN apt-get update && apt-get install -y curl && curl -sL https://deb.nodesource.com/setup_14.x | bash && apt-get install -y nodejs && cd /app/frontend && npm install
+
+# Expose the necessary ports
+EXPOSE 8080
+EXPOSE 3000
+
+# Set the entry point
+ENTRYPOINT ["sh", "/szj/docker-entrypoint.sh"]
